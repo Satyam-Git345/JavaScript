@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Nested Object
+
+        let mycar=new Object();
+        mycar['name']="Maruti";
+        mycar["model"]="Baleno";
+        mycar["year"]=2018;
+        mycar["onner_name"]="Satyam Shukla";
+        
+        mycar.stereo=new Object();
+        mycar.stereo.name="Vitera Briza";
+        mycar.stereo.maxvol=30;
+        mycar.stereo.year=2011;
+        mycar.stereo.onner="Naman Pandey";
+       
+        // console.log(mycar);
+        console.log(mycar.name);
+        console.log(mycar.model);
+        console.log(mycar.year);
+        console.log(mycar.onner_name);
+
+        console.log(mycar["stereo"]["name"]);
+        console.log(mycar.stereo.maxvol);
+        console.log(mycar.stereo.year);
+        console.log(mycar.stereo.onner);
+
+        console.log(mycar);
+        console.log(mycar.stereo);
+    </script>
+</body>
+</html>

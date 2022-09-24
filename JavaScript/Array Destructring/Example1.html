@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.
+        let arr=["Hello","World"];
+
+        let [first,second]=arr;
+        document.write(`${first}<br>`);
+        document.write(`${second}<br><br>`);
+
+        //2.
+        let colors=["Black","Red","Green","Yellow","Pink","White","Lightblue","Orange"];
+        let[color1,color2,color3]=colors;
+        document.write(`${color1}<br>`);
+        document.write(`${color2}<br>`);
+        document.write(`${color3}<br><br>`);
+
+        //3.
+        let colors1=["Black","Red","Green","Yellow","Pink","White","Lightblue","Orange"];
+        let[c1, ,c2, ,c3]=colors1;
+        document.write(`${c1}<br>`);
+        document.write(`${c2}<br>`);
+        document.write(`${c3}<br><br>`);
+
+
+        //4.
+        let colors2=["Black","Red","Green","Yellow","Pink","White","Lightblue","Orange"];
+        let[a,b,c,...newcolors]=colors2;
+        document.write(`${a}<br>`);
+        document.write(`${b}<br>`);
+        document.write(`${c}<br>`);
+        document.write(`${newcolors}<br><br>`);
+        console.log(newcolors);
+
+
+        //5.
+        let x,y,z;
+        [x,y,z]=[20,30,44];
+        document.write(`${x}<br>`);
+        document.write(`${y}<br>`);
+        document.write(`${z}<br><br>`);
+
+
+        //6.
+        //Swapping values 
+        let p=100,q=200;
+        [p,q]=[q,p];
+        document.write(`${p}<br>`);
+        document.write(`${q}<br><br>`);
+
+
+        //7.
+        //Returning array to a function
+        function array(){
+            return[10,20,30,40,50];
+        }
+
+        let[n1,n2,n3,n4,n5]=array();
+
+        document.write(`${n1}<br>`);
+        document.write(`${n2}<br>`);
+        document.write(`${n3}<br>`);
+        document.write(`${n4}<br>`);
+        document.write(`${n5}<br><br>`);
+
+        //8.
+        //Copy Two Array in new Array
+
+        let arr1=[10,20,30,40,50];
+        let arr2=[60,70,80,90,100];
+        let arr3=[...arr1,...arr2];
+        document.write(`${arr1}<br>`);
+        document.write(`${arr2}<br>`);
+        document.write(`${arr3}<br><br>`);
+
+
+        //9. Rest Parameter
+        
+        let Satyam=function(...args)
+        {
+            document.write(`${args}<br>`);
+            document.write(`${args[1]}<br><br>`);
+        }
+        Satyam(40,50,60,70,80);
+
+        //Function Expression
+        let Satyam1=function()
+        {
+           for(let x in arguments){
+            document.write(`${arguments[x]}<br>`);
+           }
+            document.write(`${arguments[1]}<br><br>`);
+        }
+
+        Satyam1(40,50,60,70,80);
+
+        //Arrow Function
+         let Satyam3=(...arr)=>{
+            document.write(`Arrow Function Called<br><br>`);
+            document.write(`${arr}<br><br>`);    
+         }       
+         Satyam3(10,20,30,40,50);
+
+
+         function sum(x, y ,z) {
+                console.log(x + y + z); 
+         }
+
+        const num1 = [1, 3, 4, 5];
+        sum(...num1); 
+    </script>
+</body>
+</html>

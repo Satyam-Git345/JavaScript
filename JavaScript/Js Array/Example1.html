@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <script>
+        let nums=[10,20,30,40,50,60,70,80,90,100];
+        document.write(`${nums.length}<br>`);
+        delete nums[8];
+        document.write(`${nums}<br>`);
+        document.write(`${nums[8]}<br>`);
+
+
+        for (let x in nums) {
+            document.write(`${nums[x]}<br>`);  
+        }
+
+
+        document.write(`<br>`);
+        for(let i=0; i<nums.length; i++) {
+            document.write(`${nums[i]}<br>`);
+        }
+        document.write(`<br>`);
+
+        for(const i of nums) {
+            document.write(`${i}<br>`);
+        }
+
+        nums[20]=35;
+        document.write(`<br>`);
+
+        for(const i of nums) {
+            document.write(`${i}<br>`);
+        }
+        document.write(`${nums.length}<br>`);
+        nums.reverse();
+       </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Function demo</title>
+        <script>
+               function AverageAndSum()
+               {
+                  document.write(`Function Called With ${arguments.length} Arguments <br>`);
+                  let sum=0;
+                  for (let i=0; i<arguments.length; i++) {
+                       sum+=arguments[i]; 
+                       document.write(`${arguments[i]}<br>`); 
+                  }
+                  document.write(`Sum= ${sum}<br>`);
+                  document.write(`Average= ${sum/arguments.length}<br>`);
+             }
+    </script>
+    </head>
+    <body>
+        <script>
+            AverageAndSum(1,2,3,4,5,6,7,8,9,10,11,12);
+    </script>
+    </body>
+</html>

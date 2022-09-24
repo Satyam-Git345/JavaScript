@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.
+      let num = {
+        x: 20,
+        y: 30,
+        z: 40,
+      };
+
+      let { x, y, z } = num;
+      document.write(`${x}<br>`);
+      document.write(`${y}<br>`);
+      document.write(`${z}<br><br>`);
+
+      //2.
+      //copy two objects into a new objects
+      let even = {
+        x: 10,
+        y: 20,
+        z: 30,
+      };
+
+      let odd = {
+        a: 11,
+        b: 21,
+        c: 31,
+      };
+
+      let evenodd={...even, ...odd};
+      console.log(even);
+      console.log(odd);
+      console.log(evenodd);
+
+    </script>
+  </body>
+</html>

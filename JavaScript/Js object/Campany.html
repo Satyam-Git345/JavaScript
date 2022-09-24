@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family:'Times New Roman', Times, serif;
+        font-size:25px;
+      }
+    </style>
+    <script>
+      let company = {
+        name: "Apple",
+        foundationYear: 1946,
+
+        productList:[
+          {
+            name: "Iphone",
+            year: 2007,
+          },
+          {
+            name: "Youtube",
+            year: 2009,
+          },
+          {
+            name: "Google Earth",
+            year: 2015,
+          },
+        ],
+
+        EmployeeList: [
+          {
+            name: "Mr. Satyam Shukla",
+            Empid: "101",
+            Post: "SoftWare Developer",
+          },
+          {
+            name: "Mr. Naman Pandey",
+            Empid: "102",
+            Post: "FullStack Developer",
+          },
+          {
+            name: "Mr. Vinay Singn",
+            Empid: "103",
+            Post: "Manager",
+          },
+        ],
+
+        foundedBy: ["Steve Jobs", "Steve Wozniak"],
+        ceo: "Steve Jobs",
+        Location: "Newyork America",
+        CompanyType: "Product Based",
+
+        CreateNewProduct: function (product) {
+          company.productList.push(product);
+        },
+
+        HireNewEmployee: function (e) {
+          company.EmployeeList.push(e);
+        },
+
+        HireCeo: function (name) {
+          company.ceo = name;
+        },
+
+        ReginCeo: function () {
+          let str = company.ceo;
+          company.ceo = null;
+          return str;
+        },
+
+        ReginEmployee: function () {
+           company.EmployeeList.pop();
+          
+        },
+
+        RemoveProduct: function () {
+           company.productList.pop();
+          
+        },
+
+        toString: function () {
+          let pro = " ";
+          let emp = " ";
+          for (p of company.productList) {
+            pro = pro + p.name + "-" + p.year + " ,<br>";
+          }
+
+          for (p of company.EmployeeList) {
+            emp = emp + p.name + "-" + p.Empid + "-" + p.Post + " ,<br>";
+          }
+
+          return `<strong>Name:</strong> ${company.name}<br>
+                       <strong>Foundation Year:</strong> ${
+                         company.foundationYear
+                       }<br>
+                       <strong>Founded by:</strong> ${company.foundedBy.join(
+                         ","
+                       )}<br>
+                       <strong>CEO:</strong> ${company.ceo}<br>
+                       <strong>Location:</strong> ${company.Location}<br>
+                       <strong>Company Type:</strong> ${
+                         company.CompanyType
+                       }<br><br>
+                       <strong>Employees:</strong> ${emp}<br>
+                       <strong>Products:</strong> ${pro}<br>`;
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(`<h3>Company Details:</h3>`);
+      document.write(company);
+      document.write("<br>CEO:" + company.ReginCeo() + " resigned");
+      document.write("<h3>After CEO's Resignation</h3>");
+      document.write(company);
+      company.HireCeo("Mr. Vinay Singn");
+      document.write("<h3>After Hiring New CEO:</h3>");
+      document.write(company);
+
+      company.CreateNewProduct({
+        name: "Google Map",
+        year: 2009,
+      });
+      document.write("<h3>After Adding New Product:</h3>");
+      document.write(company);
+      company.HireNewEmployee({
+        name: "Pavan Soni",
+        Empid: 104,
+        Post: "Team Leader",
+      });
+      document.write("<h3>After Hire New Employee:</h3>");
+      document.write(company);
+      company.CreateNewProduct({
+        name: "Youtube For Kids",
+        year: 2009,
+      });
+      company.CreateNewProduct({
+        name: "Google Assistant",
+        year: 2016,
+      });
+      document.write("<h3>After Adding 2 more New Product:</h3>");
+      document.write(company);
+      company.ReginEmployee();
+      document.write("<h3>After Regin Employee:</h3>");
+      document.write(company);
+      document.write("<h3>After Remove Product:</h3>");
+      company.RemoveProduct();
+      document.write(company);
+    </script>
+  </body>
+</html>

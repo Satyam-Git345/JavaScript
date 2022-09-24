@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function demo</title>
+    <script>
+               function Greetings(){
+               document.write(`Function Called With ${arguments.length} Arguments <br>`);
+               for (let name of arguments) {
+                     alert(`Good Evening: ${name}`);
+               }
+            }
+    </script>
+</head>
+<body>
+    <script>
+        Greetings("Satyam","Naman","Rajkumar","Varun","Virat","Dhoni","Ajay","Salman");
+        // Greetings("Naman","Satyam");
+    </script>
+</body>
+</html>

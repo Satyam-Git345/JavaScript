@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mycar=new Object();
+        mycar.name="Maruti";
+        mycar.model="Baleno";
+        mycar.year=2018;
+        mycar.onner_name="Satyam Shukla";
+        mycar.Incurence="Yes";
+        mycar.number="MP15-8876";
+        mycar.Fueltype="Petrol";
+
+        //Adding properties in object
+        mycar.displayAll=function(){
+             console.log(mycar.name+","+mycar.model+","
+             +mycar.year+","+
+             mycar.onner_name+","+mycar.Incurence+","+mycar.number+","+mycar.Fueltype);
+        }
+
+        mycar["displayAll1"]=function(){
+             console.log(mycar.name+","+mycar.model+","
+             +mycar.year+","+
+             mycar.onner_name+","+mycar.Incurence+","+mycar.number+","+mycar.Fueltype);
+        }
+
+        mycar.displayAll();
+        mycar.displayAll1();
+
+    </script>
+</body>
+</html>

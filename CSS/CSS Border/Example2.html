@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:indigo ;
+        }
+        div{
+            width: 300px;
+            height: 150px;
+            border: 6px ridge red;
+            margin: 20px;
+            margin-left: 300px;
+            padding:50px;
+            font-weight: solid;
+            color:indigo;
+        }
+        p{
+            font-size:25px;
+        }
+        #one{
+            border-radius: 90px;
+            background-color:lightgreen;
+            
+        }
+        #two{
+            border-radius: 25% 10%;
+            background-color:rgb(192, 215, 146);
+            color:orchid;
+        }
+        #three{
+            border-radius: 35px 10em 10%;
+            background-color:rgb(17, 23, 6);
+            color:orchid;
+        }
+        #four{
+            border-radius: 50px 50% 50cm 50em;
+            background-color:rgb(17, 23, 6);
+            color:orchid;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <h2>Welcome to the javaTpoint.com</h2>
+        <p>border-radius: 90px;</p>
+    </div>
+
+    <div id="two">
+        <h2>Welcome to the javaTpoint.com</h2>
+        <p> border-radius: 25% 10%;</p>
+    </div>
+    
+    <div id="three">
+        <h2>Welcome to the javaTpoint.com</h2>
+        <p>border-radius: 35px 10em 10%;</p>
+    </div>
+
+    <div id="four">
+        <h2>Welcome to the javaTpoint.com</h2>
+        <p>border-radius: 50px 50% 50cm 50em;</p>
+    </div>
+
+
+    <form>
+                <label for="actor">Choose your favourite actor:</label>
+                <input list="bollywood" id="actor"/>
+                <datalist id="bollywood">
+                  <option value="Ayushman"> </option>
+                  <option value="Kartik"> </option>
+                  <option value="Hrithik"> </option>
+                  <option value="Tiger"> </option>
+                  <option value="Amir"></option>
+                </datalist>
+               <input type="submit"/>
+         </form>
+        
+</body>
+</html>

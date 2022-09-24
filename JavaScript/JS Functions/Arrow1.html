@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Normal Arrow Function
+        let add1=(a,b)=>{
+            return a+b;
+        }
+         
+        //If Function only one statement and return value then we skip return as well as brackets
+        let add2=(a,b)=>a+b;
+
+        //If Function Recive Only one parametes then we remove parentheses(()) In function
+        let n=(n)=>{
+            return n*n;
+        }
+        //  Or
+
+        let n1=n=>n*n;
+
+        let Area=r=>Math.PI*r*r;
+
+        let satyam=n=>
+        {
+            if(n%2==0)
+                return "Even Number";
+            else
+                 return "odd number";
+        }
+    </script>
+</head>
+<body>
+    <script>
+    document.write(`${add1(10,20)}<br>`);
+    document.write(`${add2(10,20)}`);
+    document.write(`${n(10)}<br>`);
+    document.write(`${n1(10)}<br>`);
+    document.write(`Area Of Cricle: ${Area(2)}<br>`);
+    document.write(`${satyam(10)}<br>`);
+    </script>
+</body>
+</html>
