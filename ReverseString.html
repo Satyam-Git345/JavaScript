@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Reverse A String
+        let str = prompt("Enter A String To Reverse");
+        document.write(`<h2>String:</h2>`);
+        document.write(`<b>${str}<b>`);
+
+        let reverseString=" ";
+        let arr=[];
+
+        for (let i = 0; i < str.length; i++) {
+             arr[i]=str.charAt(i);
+        }
+        
+        console.log(arr);
+         document.write(`<h2>After Reverse:</h2>`);
+        for(let i=arr.length-1; i>=0; i--){
+               document.write(`<b>${arr[i]}<b>`);
+        }
+    </script>
+</body>
+</html>
